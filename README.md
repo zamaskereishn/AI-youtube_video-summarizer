@@ -10,19 +10,19 @@ This project is an AI-powered tool built to summarize YouTube videos and extract
 
 ✨ Features
 
-🔍 Automatic summarization of YouTube videos using cutting-edge LLMs.
+Automatic summarization of YouTube videos using cutting-edge LLMs.
 
-⏱️ Timestamp generation for key moments in the video.
+Timestamp generation for key moments in the video.
 
-📄 Uses youtube-transcript-api to extract video transcripts.
+Uses youtube-transcript-api to extract video transcripts.
 
-🧠 Allows users to choose between AI models (Gemini, ChatGPT, DeepSeek).
+Allows users to choose between AI models (Gemini, ChatGPT, DeepSeek).
 
-⏩ Saves time by delivering key insights quickly and effectively.
+Saves time by delivering key insights quickly and effectively.
 
-📋 Built-in clipboard copy functionality for all generated content.
+Built-in clipboard copy functionality for all generated content.
 
-📥 Transcript download support.
+Transcript download support.
 
 Getting Started
 
@@ -34,36 +34,31 @@ API Keys for at least one supported LLM (Gemini, OpenAI, or DeepSeek)
 
 💻 Installation
 
-Clone the repository:
-
-bash
-https://github.com/zamaskereishn/AI-youtube_video-summarizer.git
+1) Clone the repository:
+```
+git clone https://github.com/zamaskereishn/AI-youtube_video-summarizer.git
+```
 
 Navigate into the project:
-
-bash
+```
 cd ai-video-summarizer-and-timestamp-generator-LLM-p
-
+```
 Install dependencies:
-
-bash
+```
 pip install -r requirements.txt
-
+```
 Create a .env file and add your API key(s):
-
-env
-
+```
 GOOGLE_GEMINI_API_KEY="your-gemini-key"
 OPENAI_CHATGPT_API_KEY="your-openai-key"
 DEEPSEEK_API_KEY="your-deepseek-key"
-
+```
 Only one API key is needed to run the app, but you can add multiple to enable model switching.
 
 ▶️ Run the App
-
-bash
-
+```
 streamlit run app.py
+```
 
 🙏 Acknowledgments
 
