@@ -45,13 +45,5 @@ class Misc:
         }
         </style>
 
-        <div id="page-container">
-
-        <div class="footer">
-        <p style='font-size: 0.875em;'><a style='display: inline; text-align: left;'></a><br 'style= top:3px;'>
-        By <a style='display: inline; text-align: left;' href="https://github.com/SiddharthSky" target="_blank">SiddharthSky⚡</a></p>
-        </div>
-
-        </div>
         """
         return ft

@@ -32,7 +32,9 @@ class AIVideoSummarizer:
         if os.getenv("GOOGLE_GEMINI_API_KEY"):
             self.model_env_checker.append("Gemini") 
         if os.getenv("OPENAI_CHATGPT_API_KEY"):
-            self.model_env_checker.append("ChatGPT") 
+            self.model_env_checker.append("ChatGPT")
+        if os.getenv("DEEPSEEK_API_KEY"):
+            self.model_env_checker.append("DeepSeek")  # ✅ Add DeepSeek support
         if not self.model_env_checker:
             st.warning('Error while loading the API keys from environment.', icon="⚠️")
 
@@ -49,6 +51,8 @@ class AIVideoSummarizer:
                             st.columns(3)[1].image("https://i.imgur.com/w9izNH5.png", use_column_width=True)
                         elif model_name == "ChatGPT":
                             st.columns(3)[1].image("https://i.imgur.com/Sr9e9ZC.png", use_column_width=True)
+                        elif model_name == "DeepSeek":
+                            st.columns(3)[1].image("https://brandlogos.net/wp-content/uploads/2025/02/deepseek_logo_icon-logo_brandlogos.net_s5bgc.png", use_column_width=True)
 
                     switch(self.model_name)
 
@@ -69,6 +73,8 @@ class AIVideoSummarizer:
                 self.summary = Model.google_gemini(transcript=self.video_transcript, prompt=Prompt.prompt1())
             elif self.model_name == "ChatGPT":
                 self.summary = Model.openai_chatgpt(transcript=self.video_transcript, prompt=Prompt.prompt1())
+            elif self.model_name == "DeepSeek":
+                self.summary = Model.deepseek_ai(transcript=self.video_transcript, prompt=Prompt.prompt1())
             st.markdown("## Summary:")
             st.write(self.summary)
             st_copy_to_clipboard(self.summary)
@@ -81,6 +87,10 @@ class AIVideoSummarizer:
                 self.time_stamps = Model.google_gemini(self.video_transcript_time, Prompt.prompt1(ID='timestamp'), extra=youtube_url_full)
             elif self.model_name == "ChatGPT":
                 self.time_stamps = Model.openai_chatgpt(self.video_transcript_time, Prompt.prompt1(ID='timestamp'), extra=youtube_url_full)
+            elif self.model_name == "DeepSeek":
+                self.time_stamps = Model.deepseek_ai(self.video_transcript_time, Prompt.prompt1(ID='timestamp'),
+                                                     extra=youtube_url_full)
+
             st.markdown("## Timestamps:")
             st.markdown(self.time_stamps)
             cp_text=TimestampFormatter.format(self.time_stamps)
