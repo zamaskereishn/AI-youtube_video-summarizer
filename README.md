@@ -5,9 +5,11 @@
  ![image](https://github.com/user-attachments/assets/02a128e1-ab34-4b00-b2c2-76541b7e11ff)
 
 📝 Overview
+
 This project is an AI-powered tool built to summarize YouTube videos and extract key timestamps. It uses advanced large language models (LLMs) like Google Gemini, OpenAI ChatGPT, and DeepSeek to generate concise summaries and structured breakdowns, helping users grasp video content without watching the entire thing.
 
 ✨ Features
+
 🔍 Automatic summarization of YouTube videos using cutting-edge LLMs.
 
 ⏱️ Timestamp generation for key moments in the video.
@@ -22,27 +24,35 @@ This project is an AI-powered tool built to summarize YouTube videos and extract
 
 📥 Transcript download support.
 
-🚀 Getting Started
+Getting Started
+
 ✅ Prerequisites
+
 Python 3.10 or higher
 
 API Keys for at least one supported LLM (Gemini, OpenAI, or DeepSeek)
 
 💻 Installation
+
 Clone the repository:
+
 bash
 https://github.com/zamaskereishn/AI-youtube_video-summarizer.git
 
 Navigate into the project:
+
 bash
 cd ai-video-summarizer-and-timestamp-generator-LLM-p
 
 Install dependencies:
+
 bash
 pip install -r requirements.txt
 
 Create a .env file and add your API key(s):
+
 env
+
 GOOGLE_GEMINI_API_KEY="your-gemini-key"
 OPENAI_CHATGPT_API_KEY="your-openai-key"
 DEEPSEEK_API_KEY="your-deepseek-key"
@@ -50,14 +60,17 @@ DEEPSEEK_API_KEY="your-deepseek-key"
 Only one API key is needed to run the app, but you can add multiple to enable model switching.
 
 ▶️ Run the App
+
 bash
+
 streamlit run app.py
 
-🤝 Contributing
-Contributions are welcome! Whether it's fixing bugs, adding new features, or improving documentation, your input is appreciated. Feel free to submit a pull request or open an issue.
-
 🙏 Acknowledgments
+
 Google Gemini
+
 OpenAI ChatGPT
+
 DeepSeek
+
 Siddharth Kamble
